@@ -13,17 +13,12 @@ def calc_admission_fee(age, *, student=False, citizen=True):
     if age < 12:
         return 100
     if age >= 12:
-        if student:
-            if citizen:
-                return 200
-            else:
-                return 300
+        if citizen == True:
+            return 200
+        elif student == True:
+            return 300
         else:
-            if citizen:
-                return 200
-            else:
-                return 500
-
+            return 500
 
 if __name__ == "__main__":
     print(calc_admission_fee(age=5))
