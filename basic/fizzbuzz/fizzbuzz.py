@@ -11,22 +11,14 @@ FizzBuzz.
 
 
 def fizz_buzz(num):
-    if num % 3 == 0:
-        if num % 5 == 0:
-            return "FizzBuzz"
-        else:
-            return "Fizz"
-
-    if num % 5 == 0:
-        if num % 3 == 0:
-            return "FizzBuzz"
-        else:
-            return "Buzz"
-
-    if num % 3 != 0:
-        if num % 5 != 0:
-            return str(num)
-
+    if num % 5 == 0 and num % 3 == 0:
+        return "FizzBuzz"
+    elif num % 5 == 0:
+        return "Buzz"
+    elif num % 3 == 0:
+        return "Fizz"
+    else:
+        return str(num)
 
 if __name__ == "__main__":
     for i in range(1, 51):
